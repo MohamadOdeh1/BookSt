@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -38,14 +39,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_add:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new LendFragment()).commit();
+                startActivity(new Intent(MainActivity.this,LendFragment.class));
                 break;
-            /*case R.id.nav_share:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ChatFragment()).commit();
+            case R.id.nav_profile:
+                startActivity(new Intent(MainActivity.this,ProfileActivity.class));
                 break;
-            case R.id.nav_rate:
+            /*case R.id.nav_rate:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ProfileFragment()).commit();
                 break;*/
