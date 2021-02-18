@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#C6B0B0">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="77dp"
+        android:layout_height="44dp"
+        android:text="Author:"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="307dp" />
 
     <TextView
         android:id="@+id/textView"
+        android:layout_width="81dp"
+        android:layout_height="43dp"
+        android:text="Name:"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="138dp"
+        android:layout_height="43dp"
+        android:text="Publisher:"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="378dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="83dp"
+        android:layout_height="56dp"
+        android:text="P. year:"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="462dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="193dp"
-        android:layout_marginLeft="193dp"
-        android:layout_marginTop="334dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginRight="160dp"
-        android:layout_marginBottom="378dp"
-        android:text="Fragment lend"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="296dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="117dp"
+        android:layout_height="40dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="455dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="378dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="92dp"
+        android:text="Upload a book"
+        android:textColor="#000000"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="88dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/free" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="106dp"
+        android:layout_height="89dp"
+        android:text="Done"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:backgroundTint="#59A65B"
+        app:iconTint="#FFFFFF"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="542dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
