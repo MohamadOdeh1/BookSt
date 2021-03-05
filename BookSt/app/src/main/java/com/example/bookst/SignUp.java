@@ -75,7 +75,9 @@ public class SignUp extends AppCompatActivity {
                                 public void onSuccess(Void aVoid) {
                                     Toast.makeText(SignUp.this, "Saved",
                                             Toast.LENGTH_SHORT).show();
+                                    finish();
                                     startActivity(new Intent(SignUp.this, MainActivity.class));
+
                                 }
                             });
 

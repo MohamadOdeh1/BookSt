@@ -37,6 +37,9 @@ public class LogInAct extends AppCompatActivity {
         txtLog = (TextView) findViewById(R.id.signUpTxt);
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user!=null){
+            startActivity(new Intent(LogInAct.this, MainActivity.class));
+        }
         btnLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +49,9 @@ public class LogInAct extends AppCompatActivity {
         txtLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(LogInAct.this, SignUp.class));
+
             }
         });
     }
@@ -59,7 +64,7 @@ public class LogInAct extends AppCompatActivity {
                     startActivity(new Intent(LogInAct.this, MainActivity.class));
                 }
                 else{
-
+                    Toast.makeText(LogInAct.this, "Failed!!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
