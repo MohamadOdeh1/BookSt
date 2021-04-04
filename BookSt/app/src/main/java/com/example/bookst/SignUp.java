@@ -20,7 +20,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -30,6 +32,7 @@ public class SignUp extends AppCompatActivity {
     private EditText txtPhone;
     private EditText txtFname;
     private EditText txtLname;
+    private ArrayList<BookData> bookDataList;
     private Button btnSignUp;
     private String emailA;
     private String passwordA;
@@ -45,6 +48,7 @@ public class SignUp extends AppCompatActivity {
         btnSignUp = (Button) findViewById(R.id.btnSignUp);
         txtFname = (EditText) findViewById(R.id.firstName);
         txtPhone = (EditText) findViewById(R.id.phoneNo);
+        bookDataList = new ArrayList<BookData>();
         mAuth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +74,7 @@ public class SignUp extends AppCompatActivity {
                             user1.put("First Name",name);
                             user1.put("Phone No",phoneNo);
                             user1.put("Email",emailAd);
+                            user1.put("Books",bookDataList);
                             documentReference.set(user1).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {

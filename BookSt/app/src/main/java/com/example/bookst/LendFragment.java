@@ -65,10 +65,11 @@ public class LendFragment extends AppCompatActivity {
                 String loc = location.getSelectedItem().toString();
                 String year = publishYear.getSelectedItem().toString();
                 id = reference.push().getKey();
-                BookData bd = new BookData(name,author,publisher,year,id,loc);
+                BookData bd = new BookData(name,author,publisher,year,id,loc,"true");
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("books");
                 reference.child(id).setValue(bd);
+
             }
         });
     }

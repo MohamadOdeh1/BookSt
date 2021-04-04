@@ -61,6 +61,45 @@ public class BookData {
 
     private String location;
 
+    public String getAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(String available) {
+        isAvailable = available;
+    }
+
+    private String isAvailable;
+
+    public String getPosterPhone() {
+        return posterPhone;
+    }
+
+    public void setPosterPhone(String posterPhone) {
+        this.posterPhone = posterPhone;
+    }
+
+    private String posterPhone;
+
+    public BookData(String bookName, String author, String publisherName, String publishingYear, String id, String location, String isAvailable, String posterPhone) {
+        this.bookName = bookName;
+        this.Author = author;
+        this.publisherName = publisherName;
+        this.publishingYear = publishingYear;
+        this.id = id;
+        this.location = location;
+        this.isAvailable = isAvailable;
+        this.posterPhone = posterPhone;
+    }
+    public BookData(String bookName, String author, String publisherName, String publishingYear, String id, String location, String isAvailable) {
+        this.bookName = bookName;
+        this.Author = author;
+        this.publisherName = publisherName;
+        this.publishingYear = publishingYear;
+        this.id = id;
+        this.location = location;
+        this.isAvailable = isAvailable;
+    }
     public BookData(String bookName, String author, String publisherName, String publishingYear, String id, String location) {
         this.bookName = bookName;
         this.Author = author;
