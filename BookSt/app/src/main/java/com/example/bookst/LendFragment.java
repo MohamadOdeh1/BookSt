@@ -64,8 +64,15 @@ public class LendFragment extends AppCompatActivity {
                 String publisher = txtPublisher.getText().toString();
                 String loc = location.getSelectedItem().toString();
                 String year = publishYear.getSelectedItem().toString();
+                Boolean isVip;
+                if((Integer)publishYear.getSelectedItem() <= 1980){
+                    isVip = true;
+                }
+                else{
+                    isVip = false;
+                }
                 id = reference.push().getKey();
-                BookData bd = new BookData(name,author,publisher,year,id,loc,"true");
+                BookData bd = new BookData(name,author,publisher,year,id,loc,"true",isVip);
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("books");
                 reference.child(id).setValue(bd);

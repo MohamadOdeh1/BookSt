@@ -1,6 +1,6 @@
 package com.example.bookst;
 
-public class BookData {
+public class BookData extends VipBook{
     public String getBookName() {
         return bookName;
     }
@@ -91,7 +91,7 @@ public class BookData {
         this.isAvailable = isAvailable;
         this.posterPhone = posterPhone;
     }
-    public BookData(String bookName, String author, String publisherName, String publishingYear, String id, String location, String isAvailable) {
+    public BookData(String bookName, String author, String publisherName, String publishingYear, String id, String location, String isAvailable, boolean isVip) {
         this.bookName = bookName;
         this.Author = author;
         this.publisherName = publisherName;
@@ -99,15 +99,9 @@ public class BookData {
         this.id = id;
         this.location = location;
         this.isAvailable = isAvailable;
+        this.isVip = isVip;
     }
-    public BookData(String bookName, String author, String publisherName, String publishingYear, String id, String location) {
-        this.bookName = bookName;
-        this.Author = author;
-        this.publisherName = publisherName;
-        this.publishingYear = publishingYear;
-        this.id = id;
-        this.location = location;
-    }
+
     public BookData(){
 
     }

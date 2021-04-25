@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static String location;
     private String email;
     private String name;
+    private ImageView img;
     public static List<BookData> bb;
     public static BookData bookD;
     public static String phoneme;
@@ -71,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         View header = navigationView.getHeaderView(0);
         textMail = header.findViewById(R.id.mailPro);
         textName = header.findViewById(R.id.namePro);
+        img = header.findViewById(R.id.image);
+        img.setImageResource(R.drawable.ic_baseline_person_24);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference userRef = db.document("users/"+user.getUid().toString());
         userRef.get()

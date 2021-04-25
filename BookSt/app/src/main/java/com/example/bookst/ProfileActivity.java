@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class ProfileActivity extends AppCompatActivity {
     private EditText phone;
     private EditText email;
     private FirebaseAuth mAuth;
+    private ImageView img;
     private static final String KEY_TITLE = "First Name";
     private static final String KEY_PHONE = "Phone No";
     private static final String KEY_EMAIL = "Email";
@@ -30,6 +32,8 @@ public class ProfileActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_fragment);
+        img = findViewById(R.id.imageView);
+        img.setImageResource(R.drawable.ic_baseline_person_24);
         name = findViewById(R.id.txtFname);
         phone = findViewById(R.id.txtPhone);
         email = findViewById(R.id.editTextTextEmailAddress);

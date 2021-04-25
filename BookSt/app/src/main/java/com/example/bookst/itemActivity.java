@@ -1,9 +1,12 @@
 package com.example.bookst;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,10 +22,12 @@ public class itemActivity extends AppCompatActivity {
     private TextView bookyear;
     private TextView bookPub;
     private TextView bookLc;
+    ActionBar actionBar;
     private TextView bookAuth;
     private TextView textPho;
     private FirebaseAuth mAuth;
     private Button btnGet;
+    private ImageView img;
     FirebaseDatabase  database;
     DatabaseReference mDatabaseRef;
     @Override
@@ -40,6 +45,10 @@ public class itemActivity extends AppCompatActivity {
         bookLc = findViewById(R.id.textLc);
         bookAuth = findViewById(R.id.textAuth);
         btnGet = findViewById(R.id.btnOrder);
+        //img = findViewById(R.id.imgVip);
+        if(MainActivity.bookD.isVip()){
+            //img.setImageResource(R.drawable.pp);
+        }
         bookNm.setText(MainActivity.bookD.getBookName().toString());
         bookAuth.setText(MainActivity.bookD.getAuthor().toString());
         bookPub.setText(MainActivity.bookD.getPublisherName().toString());

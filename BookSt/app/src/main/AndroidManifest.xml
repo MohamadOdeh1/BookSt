@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BookSt">
-        <activity android:name=".itemActivity"></activity>
+        <activity android:name=".MyBooks"></activity>
+        <activity android:name=".itemActivity" />
         <activity android:name=".SignUp" />
         <activity android:name=".LogInAct">
             <intent-filter>
@@ -18,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".LendFragment" />
         <activity android:name=".ProfileActivity" />
     </application>
